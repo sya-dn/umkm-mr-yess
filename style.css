@@ -162,12 +162,15 @@ footer {
     }
 
     .menu-images {
-        flex-direction: column;
-        gap: 15px;
+        display: flex; /* Aktifkan Flexbox */
+        flex-direction: column; /* Susun gambar secara vertikal */
+        align-items: center; /* Pusatkan gambar di layar */
+        gap: 15px; /* Atur jarak antar gambar */
     }
 
     .menu-item img {
-        width: 90%;
+        width: 90%; /* Sesuaikan lebar gambar dengan layar HP */
+        height: auto; /* Proporsi gambar tetap terjaga */
     }
 
     .cafe-image {
