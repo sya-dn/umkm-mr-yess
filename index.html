@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Yess Cafe</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tambahkan link CSS untuk Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/logoo.png" alt="Logo Mr. Yess" class="logo">
+            <h1>Welcome to MR YESS COFFE CAFE</h1>
+        </div>
+        <div class="sub-header">
+            <h6>Buka setiap hari (08.00-14.00) (14.00-23.00)</h6>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Konten utama di sini -->
+        <section class="home-content">
+            <img src="img/tempat.jpeg" alt="Cafe Mr. Yess" class="cafe-image">
+
+            <!-- Div untuk peta -->
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mr. Yess Coffe cafe Hak Cipta Dilindungi Undang Undang</p>
+    </footer>
+
+    <!-- Tambahkan script untuk Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Inisialisasi peta
+        var map = L.map('map').setView([-6.125929594369359, 120.45860766546372], 12); // Koordinat Selayar, sesuaikan dengan lokasi peta
+
+        // Menambahkan Tile Layer (Peta dasar dari OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Menambahkan marker untuk lokasi Mr. Yess Cafe
+        var marker = L.marker([-6.125929594369359, 120.45860766546372]).addTo(map);
+        marker.bindPopup("<b>MR YESS COFFEE CAFE</b><br>Tempat nongkrong terbaik!").openPopup();
+    </script>
+</body>
+
+</html>

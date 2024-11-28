@@ -1,0 +1,229 @@
+/* CSS untuk Header */
+header {
+    display: flex;
+    flex-direction: column; /* Atur elemen header secara vertikal */
+    align-items: center; /* Pusatkan elemen */
+    background-color: #333;
+    color: #fff;
+    padding: 2px 0; /* Tambahkan padding vertikal */
+    gap: 8px; /* Atur jarak antar elemen di dalam header */
+}
+
+
+
+/* CSS tambahan untuk header (tidak berubah di semua halaman) */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 2px 0;
+}
+
+/* CSS untuk Background */
+body {
+    background: linear-gradient(to bottom, #f5f5dc, #fffaf0, #f5f5dc); /* Gradien warna cream */
+    color: #333; /* Warna teks untuk kontras */
+    font-family: Arial, sans-serif; /* Font keluarga untuk teks */
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Pusatkan logo dan teks secara vertikal */
+    gap: 15px; /* Beri jarak antara logo dan teks */
+    margin-bottom: 10px; /* Jarak antara logo dan teks lainnya */
+}
+
+.logo {
+    width: 100px; /* Sesuaikan ukuran logo */
+    height: auto;
+}
+
+header h1 {
+    font-size: 24px; /* Ukuran tulisan "Welcome to Mr. Yess Cafe" */
+    margin-bottom: 5px; /* Jarak antara h1 ke elemen bawah */
+}
+
+.sub-header {
+    margin-top: -10px; /* Dekatkan ke logo-container */
+    line-height: 1.5; /* Atur spasi baris */
+}
+
+header h6 {
+    font-size: 14px; /* Ukuran lebih kecil */
+    color: #fff;
+    text-align: center; /* Pusatkan teks */
+    line-height: 1.5; /* Spasi antar baris seperti di Word */
+    margin-top: -10px; /* Sesuaikan untuk mendekatkan ke elemen atas */
+    margin-bottom: 0; /* Atur jarak ke elemen bawah */
+}
+
+
+
+/* CSS untuk Navigasi */
+nav {
+    margin-top: 10px; /* Jarak antara teks dan menu */
+    text-align: center;
+    background-color: #333;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* CSS untuk Home Section */
+.home-content {
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Menjadikan elemen ini sebagai referensi untuk peta */
+}
+
+.home-content h2 {
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+.cafe-image {
+    width: 100%; /* Sesuaikan lebar gambar dengan lebar elemen induknya */
+    max-width: 800px; /* Maksimum lebar gambar */
+    height: auto; /* Jaga proporsi gambar */
+    margin: 0 auto; /* Pusatkan gambar jika elemen induknya lebih lebar */
+    display: block; /* Hilangkan jarak default inline */
+}
+
+#map {
+    position: absolute; /* Peta diposisikan absolut */
+    bottom: 10px; /* Jarak dari bawah */
+    right: 10px; /* Jarak dari kanan */
+    width: 300px; /* Lebar peta */
+    height: 200px; /* Tinggi peta */
+    border: 2px solid #ccc; /* Tambahkan border jika diperlukan */
+    z-index: 10; /* Peta tampil di atas gambar */
+}
+
+
+/* CSS untuk Menu */
+.menu {
+    margin: 20px auto;
+    text-align: center;
+    max-width: 1200px;
+}
+
+.menu-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar gambar */
+    margin-bottom: 20px; /* Jarak dari bagian menu lainnya */
+}
+
+.menu-item {
+    text-align: center; /* Agar teks di bawah gambar sejajar */
+}
+
+.menu-item img {
+    width: 500px; /* Atur ukuran gambar */
+    height: auto; /* Proporsional sesuai dimensi asli */
+    border-radius: 10px; /* Sudut gambar melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+
+.menu-item p {
+    margin-top: 10px; /* Jarak antara gambar dan teks */
+    font-weight: bold; /* Menebalkan teks */
+    font-size: 16px; /* Ukuran teks */
+}
+
+
+/* CSS untuk Peta */
+#map {
+    height: 400px; /* Atur tinggi peta */
+    width: 400px;  /* Atur lebar peta agar berbentuk persegi */
+    margin: 0 auto; /* Pusatkan peta */
+    border: 2px solid #333; /* Tambahkan border untuk estetika */
+    border-radius: 10px; /* Sudut peta melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+
+
+
+/* CSS untuk Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    position: relative; /* Pastikan footer tetap di bawah */
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+/* CSS Responsif untuk Layar Kecil */
+@media (max-width: 768px) {
+
+#map {
+        position: relative; /* Ubah posisi peta agar berada di bawah gambar */
+        bottom: 0; /* Menghilangkan jarak dari bawah */
+        right: 0; /* Menghilangkan jarak dari kanan */
+        width: 100%; /* Lebar peta 100% agar sesuai dengan layar perangkat mobile */
+        height: 250px; /* Menyesuaikan tinggi peta di perangkat mobile */
+        border: none; /* Hilangkan border pada peta */
+        margin-top: 10px; /* Memberikan jarak antara gambar dan peta */
+    }
+
+    header h1 {
+        font-size: 18px; /* Ukuran lebih kecil untuk layar HP */
+    }
+
+    .logo {
+        width: 80px; /* Ukuran logo lebih kecil */
+    }
+
+    header h6 {
+        font-size: 12px; /* Sesuaikan ukuran sub-header */
+        margin-top: -5px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Menu vertikal untuk layar kecil */
+        gap: 10px; /* Jarak antar menu */
+    }
+
+    .menu-images {
+        
+        max-width: 100%; /* Maksimum lebar menjadi 100% dari layar */
+    }
+}
+
+    
+
+    .menu-item img {
+        width: 90%; /* Sesuaikan gambar dengan lebar layar */
+    }
+
+    .cafe-image {
+        max-width: 100%; /* Gambar utama menyesuaikan layar */
+    }
+
+    .menu {
+        padding: 10px; /* Kurangi padding untuk layar kecil */
+    }
+
