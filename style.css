@@ -114,11 +114,12 @@ nav ul li a:hover {
     max-width: 1200px;
 }
 
-/* Default layout untuk desktop */
+/* Default untuk desktop: gambar menu makanan dan minuman bersebelahan */
 .menu-images {
     display: flex;
-    flex-wrap: nowrap; /* Gambar bersebelahan */
-    gap: 220px;
+    flex-wrap: nowrap; /* Elemen tidak terbungkus ke baris berikut */
+    justify-content: center; /* Pusatkan elemen */
+    gap: 20px; /* Jarak antar elemen */
 }
 
 .menu-item img {
@@ -161,15 +162,13 @@ footer {
     }
 
     .menu-images {
-        display: flex;
-        flex-direction: column; /* Gambar bersusun ke bawah */
-        align-items: center;
-        gap: 15px; /* Jarak antar gambar */
+        flex-direction: column; /* Gambar disusun ke bawah */
+        gap: 15px; /* Jarak antar elemen */
     }
 
     .menu-item img {
-        width: 90%; /* Gambar menyesuaikan layar */
-        height: auto;
+        width: 90%; /* Sesuaikan ukuran gambar */
+        margin: 0 auto; /* Pusatkan gambar */
     }
 
     .cafe-image {
